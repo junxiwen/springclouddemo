@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-config
+#  cloud:
+#    config:
+#      server:
+#        git: #git仓库配置
+#          uri: https://github.com/junxiwen/springcloudconfig
+#          search-paths: /**
+#          username: junxiwen
+#          password: YANG0227wy
+#使用本地文件系统来保存配置文件 ； Config Server会默认从src/main/resources目录搜索文件
+#也可以通过spring.cloud.config.server.native.search-locations来指定具体目录
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: src/main/resources/config
+server:
+  port: 8770
+
