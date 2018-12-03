@@ -8,3 +8,5 @@ springcloud案例，待完善
 5、zuul
 6、config
 7、config - client
+
+测试sourceTree
