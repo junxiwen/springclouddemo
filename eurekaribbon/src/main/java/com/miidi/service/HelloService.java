@@ -32,8 +32,8 @@ public class HelloService {
 
 
     public User user(User user){
-        restTemplate.postForObject("http://EUREKA-CLIENT/user", user, User.class);
-        return null;
+        User resUser =  restTemplate.postForObject("http://EUREKA-CLIENT/user", user, User.class);
+        return resUser;
     }
 
 

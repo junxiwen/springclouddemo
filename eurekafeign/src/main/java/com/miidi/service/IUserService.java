@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 //指定要调用的服务名
 @FeignClient(value = "EUREKA-CLIENT")
-public interface FeignService {
+public interface IUserService {
     @GetMapping("/hi/{name}")
     String sayHi(@PathVariable("name") String name);
 

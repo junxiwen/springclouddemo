@@ -1,6 +1,6 @@
 package com.miidi.controller;
 
-import com.miidi.service.HiService;
+import com.miidi.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HiController {
     @Autowired
-    private HiService hiService;
+    private IUserService userService;
 
     @GetMapping("/hi/{name}")
     public String hi(@PathVariable("name")String name){
         log.error("feign接收请求");
-        return hiService.hi(name);
+        return userService.sayHi(name);
     }
 
 
     @GetMapping(value = "/user/{age}")
     public User getUser(@PathVariable("age") Integer age){
-        return hiService.getUser(age);
+        return userService.getUser(age);
     }
 }

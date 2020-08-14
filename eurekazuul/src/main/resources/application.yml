@@ -13,8 +13,8 @@ spring:
 zuul:
   routes:
     api-a:
-      path: /api-a/**   #所有/api-a/**的服务 采用eureka-ribbon-client
+      path: /api-a/**   #所有/api-a/**的请求 调用 eureka-ribbon-client 服务
       serviceId: eureka-ribbon-client
     api-b:
-      path: /api-b/**  #所有/api-b/**的服务 采用eureka-feign-client
+      path: /api-b/**  #所有/api-b/**的请求 调用 eureka-feign-client 服务
       serviceId: eureka-feign-client
